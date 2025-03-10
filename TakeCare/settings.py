@@ -125,6 +125,12 @@ STATICFILES_DIRS = [
 STATIC_URL = '/static/'  # URL prefix for serving static files
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # For production (collecting static files)
 
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/login/'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # For testing password reset
+
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
