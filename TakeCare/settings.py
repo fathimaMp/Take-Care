@@ -127,8 +127,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # For production (collectin
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/login/'
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # For testing password reset
-
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 
 
