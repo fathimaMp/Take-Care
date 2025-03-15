@@ -1,9 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate as authlogout
 
 
 
@@ -56,6 +56,6 @@ class CustomPasswordResetCompleteView(PasswordResetCompleteView):
 
 
 # Logout View
-def logout_view(request):
-    logout(request)
-    return redirect('login')
+def logout(request):
+    authlogout(request)
+    return redirect('index')
