@@ -1,3 +1,4 @@
+
 /**
 * Template Name: Medilab
 * Template URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
@@ -64,6 +65,7 @@ body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
+  width: 100%;
 }
 
 a {
@@ -222,16 +224,11 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  background: white;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 10px 20px;
+  color: var(--default-color);
+  transition: all 0.5s;
+  z-index: 997;
+  background-color: var(--background-color);
 }
-
 
 .header .topbar {
   background-color: var(--accent-color);
@@ -1731,47 +1728,4 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
-}
-
-/* ✅ Fix Navbar: Make it stay fixed at the top */
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: white;
-  z-index: 1000;
-  padding: 15px 20px;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-/* ✅ Prevent Body from Scrolling when Clicking on Login */
-html, body {
-  height: 100%;
-  margin: 0;
-  overflow: hidden; /* Prevents scrolling */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #edfcfe;
-}
-
-/* ✅ Center Login Box Properly */
-.content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh; /* Full screen height */
-  padding-top: 80px; /* Space for navbar */
-}
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  background: white; /* Ensure background is visible */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
