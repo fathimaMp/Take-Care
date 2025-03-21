@@ -12,9 +12,6 @@ from django.contrib.auth import authenticate as authlogout
 def index(request):
     return render(request, "index.html")
 
-from django.shortcuts import redirect
-from django.contrib.auth import authenticate, login
-from django.contrib import messages
 
 def custom_login_view(request):
     if request.method == "POST":
