@@ -2,8 +2,6 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.models import User
 
-# Unregister the default User model
-admin.site.unregister(User)
 
 # Customize User model in the admin panel
 class CustomUserAdmin(UserAdmin):

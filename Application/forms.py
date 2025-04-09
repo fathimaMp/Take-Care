@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
-from django.contrib.auth.forms import AuthenticationForm,UsernameField,PasswordChangeForm,SetPasswordForm,PasswordResetForm
+from django.contrib.auth.forms import AuthenticationForm,UsernameField,PasswordChangeForm,SetPasswordForm,PasswordResetForm,UserCreationForm
+from .models import CustomUser
 
 
 class LoginForm(AuthenticationForm):
@@ -27,3 +28,11 @@ class MySetPasswordForm(SetPasswordForm):
 
 class MyPasswordResetForm(PasswordResetForm):
     email = forms.EmailField(widget=forms.EmailInput(attrs={'class':'form-control'}))
+
+
+# Registration Form
+class MyUserCreationForm(UserCreationForm):
+    class Meta:
+        model = CustomUser
+        fields = ['firstname', 'lastname', 'email', 'phone', 'password1', 'password2']
+
