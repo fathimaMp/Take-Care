@@ -30,9 +30,37 @@ class MyPasswordResetForm(PasswordResetForm):
     email = forms.EmailField(widget=forms.EmailInput(attrs={'class':'form-control'}))
 
 
-# Registration Form
+# # Registration Form
+# class MyUserCreationForm(UserCreationForm):
+#     class Meta:
+#         model = CustomUser
+#         fields = ['firstname', 'lastname', 'email', 'phone', 'password1', 'password2']
+
+
+
 class MyUserCreationForm(UserCreationForm):
+    firstname = forms.CharField(
+        max_length=30,
+        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'First Name'})
+    )
+    lastname = forms.CharField(
+        max_length=30,
+        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Last Name'})
+    )
+    email = forms.EmailField(
+        widget=forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'Email'})
+    )
+    phone = forms.CharField(
+        max_length=15,
+        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Phone'})
+    )
+    password1 = forms.CharField(
+        widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Password'})
+    )
+    password2 = forms.CharField(
+        widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Confirm Password'})
+    )
+
     class Meta:
         model = CustomUser
         fields = ['firstname', 'lastname', 'email', 'phone', 'password1', 'password2']
-
