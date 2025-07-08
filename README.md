@@ -1,4 +1,5 @@
 TakeCare
+--------
 
 This project encompasses a wide range of useful ideas that we keep confidential. Neverthless, we will highlight two key features that are part of our development plan.
 
